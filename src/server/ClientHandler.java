@@ -24,7 +24,7 @@ public class ClientHandler {
 
             new Thread(() -> {
                 try {
-                    socket.setSoTimeout(5000);
+                    socket.setSoTimeout(500000);
 
                     //цикл аутентификации
                     while (true) {

@@ -19,7 +19,7 @@ public class Server {
         authService = new SimpleAuthService();
         ServerSocket server = null;
         Socket socket = null;
-        final int PORT = 8189;
+        final int PORT = 8111;
 
         try {
             server = new ServerSocket(PORT);
@@ -34,6 +34,7 @@ public class Server {
             e.printStackTrace();
         } finally {
             try {
+                assert socket != null;
                 socket.close();
             } catch (IOException e) {
                 e.printStackTrace();
